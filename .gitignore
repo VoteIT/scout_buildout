@@ -6,13 +6,14 @@
 .mr.developer*
 .settings
 .idea
-etc/salt.txt
-etc/login_providers.ini
+*.egg-info
 bin
 include
 lib
 eggs
 develop-eggs
 parts
-src
 *.pyc
+!src
+src/*
+!src/scout
