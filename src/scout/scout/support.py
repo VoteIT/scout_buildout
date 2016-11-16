@@ -75,7 +75,7 @@ def _remove_modal_response(request, *args):
 @view_action('metadata_listing', 'prop_support',
              permission = VIEW,
              interface = IProposal,
-             priority = 20)
+             priority = 32)
 def prop_support_va(context, request, va, **kw):
     output = ""
     if context.prop_support_for or context.prop_support_against:
