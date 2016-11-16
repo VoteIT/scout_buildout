@@ -1,5 +1,4 @@
 
 
 def includeme(config):
-    print "hello world"
-
+    config.include('.support')
