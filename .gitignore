@@ -13,6 +13,7 @@ lib
 eggs
 develop-eggs
 parts
+local
 *.pyc
 !src
 src/*
