@@ -78,19 +78,22 @@ def _remove_modal_response(request, *args):
              priority = 32)
 def prop_support_va(context, request, va, **kw):
     output = ""
-    if context.prop_support_for or context.prop_support_against:
+    if context.prop_support_for:
         output += """
         &nbsp;
         <span class="label label-approved" title="Antal som stödjer förslaget">
             <span class="glyphicon glyphicon-thumbs-up"></span>
             {}
         </span>
+        """.format(context.prop_support_for)
+    if context.prop_support_against:
+        output += """
         &nbsp;
         <span class="label label-denied">
             <span class="glyphicon glyphicon-thumbs-down"></span>
             {}
         </span>
-        """.format(context.prop_support_for, context.prop_support_against)
+        """.format(context.prop_support_against)
     if request.is_moderator:
         output += """&nbsp;<a href="{}" title="Redigera stöd" data-open-modal>
             <span class="glyphicon glyphicon-edit"><span></a>
