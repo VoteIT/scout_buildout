@@ -95,7 +95,7 @@ def prop_support_va(context, request, va, **kw):
         </span>
         """.format(context.prop_support_against)
     if request.is_moderator:
-        output += """&nbsp;<a href="{}" title="Redigera stöd" data-open-modal>
+        output += """&nbsp;<a href="{}" title="Redigera stöd" class="btn btn-xs btn-default" data-open-modal>
             <span class="glyphicon glyphicon-edit"><span></a>
         """.format(request.resource_url(context, 'edit_support'))
     return output
